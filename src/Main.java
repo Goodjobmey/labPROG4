@@ -1,31 +1,38 @@
-import java.util.Random;
+import Humanity.BasicHuman;
+import Humanity.Food;
+import Humanity.Human;
+import Humanity.MagicHuman;
+import Room.StrangeSound;
+import Room.Street;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args){
 
-        BasicHuman frakenbok = new BasicHuman("Фрекен Бок ", "женщина ");
-        BasicHuman malysh = new BasicHuman("Малыш", "ребенок");
-        MagicHuman karlson = new MagicHuman("Карлсон", "мужчина в самом расцвете сил");
+        BasicHuman frakenbok = new BasicHuman("Фрекен Бок ", "женщина ", "W" );
+        BasicHuman malysh = new BasicHuman("Малыш", "ребенок", "M" );
+        MagicHuman karlson = new MagicHuman("Карлсон", "мужчина в самом расцвете сил", "M");
 
-        Food plushka = new Food("плюшку");
-        Food plushki = new Food("плюшки");
         Food kofe = new Food("кофе");
 
         StrangeSound my = new StrangeSound("мычание");
         Street street = new Street("улицы");
 
+        Human.BodyPart ruka = karlson.new BodyPart("ручка", "маленькая пухленькая");
+
+
 
 
         malysh.looking();
-        karlson.stolingFood(plushka);
-        //karlson.countFunnyLvl();
+        karlson.stolingFood(ruka);
         malysh.laughing();
-
         frakenbok.thinking("'он самый утомительный в мире мальчик'");
         frakenbok.wantedDrink(kofe);
-        frakenbok.startingEmotion();
         my.sounding(street);
         frakenbok.turnaround();
-        plushki.gettingLost();
+
+        frakenbok.screaming("О боже, где мои плюшки?");
+        malysh.singing();
+        malysh.humanSwithOnTV();
+
     }
 }

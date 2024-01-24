@@ -1,3 +1,5 @@
+package Room;
+
 public class Street {
     private String location;
     private String weather;

@@ -1,3 +1,5 @@
+package Humanity;
+
 public class Emotion {
     private String name;
 
